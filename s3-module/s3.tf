@@ -39,4 +39,12 @@ resource "random_integer" "backend" {
   }
 }
 
+# bucket versioning
+resource "aws_s3_bucket_versioning" "name" {
+  bucket = aws_s3_bucket.backend.id
+  versioning_configuration {
+    status = var.versioning
+  }
+
+}
 
