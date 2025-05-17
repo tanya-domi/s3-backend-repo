@@ -5,7 +5,7 @@
 
 # s3 bucket
 resource "aws_s3_bucket" "backend" {
-  bucket = "berlinB32-${lower(var.env)}-${random_integer.backend.result}"
+  bucket = "berlin32-${lower(var.env)}-${random_integer.backend.result}"
 
   tags = {
     Name        = "My backend"
